@@ -25,7 +25,7 @@ Install on entire system:
 ```bash
 git clone https://github.com/jordanhillis/ssha.git
 cd ssha
-sudo pip3 install -r requirements.txt
+sudo python3 -m pip install -r requirements.txt
 sudo cp ssha.py /usr/bin/ssha
 sudo chmod a+x /usr/bin/ssha
 ssha
@@ -34,7 +34,7 @@ Install for single user:
 ```bash
 git clone https://github.com/jordanhillis/ssha.git
 cd ssha
-pip3 install -r requirements.txt
+python3 -m pip install -r requirements.txt
 mkdir ~/.ssh
 cp ssha.py ~/.ssh/ssha
 chmod a+x ~/.ssh/ssha
