@@ -66,7 +66,7 @@ db = TinyDB(ssh_path+"/ssha.json")
 
 # Function to detect force close
 def ctrl_c(siganl, frame):
-	print(bcolors.BOLD + bcolors.OKGREEN + "\n<< Goodbye! ( ͡° ͜ʖ ͡°)" + bcolors.ENDC)
+	print(bcolors.BOLD + bcolors.OKGREEN + "\n<< Goodbye!" + bcolors.ENDC)
 	# Exit script successfully
 	exit(0)
 
@@ -409,7 +409,7 @@ def main():
 				aliasList()
 			# Exit script command
 			elif command1 in ["exit","quit","q"]:
-				print(bcolors.BOLD + bcolors.OKGREEN + "<< Goodbye! ( ͡° ͜ʖ ͡°)" + bcolors.ENDC)
+				print(bcolors.BOLD + bcolors.OKGREEN + "<< Goodbye!" + bcolors.ENDC)
 				exit(0)
 			# See if the user got confused and tried to execute the python file inside our command line
 			elif ".py" in command1:
