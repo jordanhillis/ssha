@@ -39,6 +39,7 @@ mkdir ~/.ssh
 cp ssha.py ~/.ssh/ssha
 chmod a+x ~/.ssh/ssha
 echo "alias ssha='~/.ssh/ssha'" >> ~/.bashrc
+source ~/.bashrc
 ssha
 ```
 
