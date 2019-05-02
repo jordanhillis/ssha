@@ -35,6 +35,7 @@ Install for single user:
 git clone https://github.com/jordanhillis/ssha.git
 cd ssha
 pip3 install -r requirements.txt
+mkdir ~/.ssh
 cp ssha.py ~/.ssh/ssha
 chmod a+x ~/.ssh/ssha
 echo "alias ssha='~/.ssh/ssha'" >> ~/.bashrc
