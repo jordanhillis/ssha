@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
 ### About:
-SSH Alias is a program for Linux users to easily connect to all your SSH servers. 
+SSH Alias is a program for Linux and macOS users to easily connect to all your SSH servers. 
 Add, edit, and remove aliases to connect to so that you never have to remember the hostname/IP, port, key file location and other various settings while connecting via SSH.
 
 ### Features:
@@ -13,14 +13,16 @@ Add, edit, and remove aliases to connect to so that you never have to remember t
   - Tests latency of your SSH connection
   - Connects with alias name on shell
   - Command line interface for adding, editing and removing aliases
+  - Supports Linux and macOS
 
 ### Latest Version:
 * v1.0
 
 ### Installation:
 
-SSH Alias requires [Python](https://www.python.org/downloads/) v3+, SSH and Linux to run.
+SSH Alias requires [Python](https://www.python.org/downloads/) v3+, SSH and Linux/macOS to run.
 
+#### Linux
 Install on entire system:
 ```bash
 git clone https://github.com/jordanhillis/ssha.git
@@ -40,6 +42,28 @@ cp ssha.py ~/.ssh/ssha
 chmod a+x ~/.ssh/ssha
 echo "alias ssha='~/.ssh/ssha'" >> ~/.bashrc
 source ~/.bashrc
+ssha
+```
+#### macOS
+Install on entire system:
+```bash
+git clone https://github.com/jordanhillis/ssha.git
+cd ssha
+sudo python3 -m pip install -r requirements.txt
+sudo cp ssha.py /usr/local/bin/ssha
+sudo chmod a+x /usr/local/bin/ssha
+ssha
+```
+Install for single user:
+```bash
+git clone https://github.com/jordanhillis/ssha.git
+cd ssha
+python3 -m pip install -r requirements.txt
+mkdir ~/.ssh
+cp ssha.py ~/.ssh/ssha
+chmod a+x ~/.ssh/ssha
+echo "alias ssha='~/.ssh/ssha'" >> ~/.bash_profile
+source ~/.bash_profile
 ssha
 ```
 
