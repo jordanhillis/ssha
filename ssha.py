@@ -47,7 +47,7 @@ class bcolors:
 
 
 # Verify the user is running Linux
-if platform not in ["linux","linux2"]:
+if platform not in ["linux","linux2","darwin"]:
 	print(bcolors.FAIL + "Sorry, this program only supports Linux at this time..." + bcolors.ENDC)
 	exit(0)
 
