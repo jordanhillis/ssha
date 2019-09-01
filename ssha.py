@@ -207,7 +207,7 @@ def aliasEdit(inputCmd):
 			# Get the row from the database
 			for row in db.search(where('alias') == alias_name):
 				# Ask the user to configure each setting below
-				edit_alias = inputChange("Alias Name: ", row["alias"])
+				edit_alias = inputChange("Alias Name: ", row["alias"]).lower()
 				edit_user = inputChange("SSH User: ", row["user"])
 				edit_hostname = inputChange("SSH Hostname/IP: ", row["hostname"])
 				edit_port = inputChange("SSH Port: ", row["port"])
